@@ -44,17 +44,18 @@ public class Basic_095 {
 			int x = Integer.parseInt(location[0]) - 1;
 			int y = Integer.parseInt(location[1]) - 1;
 			
-			for (int i=0; i<table.length; i++) {
-				int[] rowAry = table[i];
-				for (int j=0; j<rowAry.length; j++) {
-					if ((i == x || y == j) && ! isCenter(i,j,locationList)) {
-						if (rowAry[j] == 0) {
-							rowAry[j] = 1;
-						} else {
-							rowAry[j] = 0;
-						}
-					} 
+			for (int i=0; i<19; i++) {
+				if (table[x][i] == 0) {
+					table[x][i] = 1;
+				} else if (table[x][i] == 1) {
+					table[x][i] = 0;
 				}
+				if (table[i][y] == 0) {
+					table[i][y] = 1;
+				} else if (table[i][y] == 1) {
+					table[i][y] = 0;
+				}
+				
 			}
 		}
 		
