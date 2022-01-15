@@ -3,7 +3,7 @@ package objective.basic02;
 public class Dog {
 
 	// 멤버변수 
-	String name;
+	public String name;
 	int hp;
 	
 	// 정적(static) 멤버변수
